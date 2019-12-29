@@ -1,0 +1,395 @@
+@font-face {
+	font-family: 'MTS Sans';	
+	src: url('../fonts/MTSSans-Regular__W.woff');	
+	font-weight: regular;	
+	font-style: normal;	
+}
+@font-face {
+	font-family: 'MTS Sans';	
+	src: url('../fonts/MTSSans-Bold__W.woff');	
+	font-weight: bold;	
+	font-style: normal;	
+}
+html, body {
+	overflow: hidden;
+	font-family: MTS Sans;
+	letter-spacing: 0.04em;
+	background: #001424;
+	/* background: linear-gradient(to top, #460003 10%, #960023 40%, #5f0000 90%); */
+	background: linear-gradient(to top, #0e001b 10%, #780096 40%, #32005f 90%);
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	/* background: url(../img/bg.jpg) #062B35 center center fixed;
+	background-repeat: no-repeat;
+    background-size: cover; */
+}
+.logo {
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	width: 120px;
+}
+.bheader {
+	position: absolute;
+    color: #fff;
+    font-size: 64px;
+    width: 960px;
+    left: 50%;
+    margin-left: -480px;
+    top: 15vh;
+    text-align: center;
+}
+.logo_load {
+	width: 240px;
+	margin-bottom: 20px;
+}
+.product {
+	width: 100%;
+	display: none;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: linear-gradient(to right, rgba(0,0,0,0) 10%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0.6) 90%);
+	z-index: 100500;
+}
+.pcontainer {
+    width: 60%;
+    position: absolute;
+    right: 5%;
+	padding-top: 20vh;
+	color: #fff;
+}
+.pheader {
+	font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.pheader2 {
+	font-size: 14px;
+    margin-bottom: 40px;
+    color: #ccc;
+}
+img.p {
+	float: right;
+    margin-top: -100px;
+    margin-left: 60px;
+}
+.add {
+	position: absolute;
+    color: #220041;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    left: 280px;
+    bottom: 40vh;
+}
+/* canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+} */
+canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+.right-side {
+	background: linear-gradient(to right, rgba(0,0,0,0) 10%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0.8) 90%);
+	position: absolute;
+	width: 800px;
+	height: 90%;
+	transform: translate3d(800px,0,0);
+	top: 0;
+	padding-top: 10%;
+	right: 0;
+	z-index: 100500;
+	-webkit-transition: all .6s;
+	-moz-transition: all .6s;
+	-ms-transition: all .6s;
+	-o-transition: all .6s;
+	transition: all .6s;
+}
+.stage {
+	width: 180px;
+	padding: 20px 30px;
+	font-size: 28px;
+	color: #9198A0;
+	cursor: pointer;
+	-webkit-transition: all .6s;
+	-moz-transition: all .6s;
+	-ms-transition: all .6s;
+	-o-transition: all .6s;
+	transition: all .6s;
+}
+.stage:hover {
+	color: #fff;
+}
+.header1 {
+	color: #fff;
+    font-size: 36px;
+	margin-bottom: 80px;
+	margin-top: 0;
+	-webkit-transition: all .6s;
+	-moz-transition: all .6s;
+	-ms-transition: all .6s;
+	-o-transition: all .6s;
+	transition: all .6s;
+}
+.header2 {
+	color: #ddd;
+	font-size: 24px;
+	font-weight: bold;
+    margin-bottom: 40px;
+}
+.content {
+	color: #ddd;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+.bttn {
+	background: #ddd;
+	color: #0a1528;
+	width: 160px;
+	text-align: center;
+	padding: 15px 30px;
+	border-radius: 4px;
+	cursor: pointer;
+	-webkit-transition: all .6s;
+	-moz-transition: all .6s;
+	-ms-transition: all .6s;
+	-o-transition: all .6s;
+	transition: all .6s;
+}
+.bttn:hover {
+	opacity: 0.8;
+}
+.bttn.close {
+	display: none;
+}
+.loader2 {
+	position: fixed;
+	z-index: 100500;
+	color: #fff;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	/*background-image: url("../img/ps_logo.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: #555;*/
+	background-color: rgba(0,0,0,1);
+}
+.progress {
+	position: absolute;
+	margin: 60px 0 0 -210px;
+	width: 426px;
+	top: 50%;
+	left: 50%;
+	color: #fff;
+	text-align: center;
+}
+.progressNumber {
+	position: relative;
+	margin-top: 10px;
+	color: #fff;
+	font-size: 12px;
+}
+.myProgress {
+	position: relative;
+	margin-top: 40px;
+	width: 100%;
+	height: 3px;
+	background-color: grey;
+}
+#myBar {
+	position: absolute;
+	width: 1%;
+	height: 100%;
+	background-color: green;
+}
+#myBar2 {
+	position: absolute;
+	width: 1%;
+	height: 100%;
+	background-color: green;
+}
+#label {
+	text-align: center;
+	line-height: 30px;
+	color: white;
+}
+.progressNumber {
+	position: relative;
+	margin-top: 10px;
+	color: #fff;
+	font-size: 12px;
+}
+.myProgress {
+	position: relative;
+	margin-top: 20px;
+	width: 100%;
+	height: 3px;
+	background-color: grey;
+}
+#myBar2 {
+	position: absolute;
+	width: 1%;
+	height: 100%;
+	background-color: green;
+}
+#label {
+	text-align: center;
+	line-height: 30px;
+	color: white;
+}
+#progress {
+	color: white;
+	position: relative;
+	top: 40%;
+	width: 100%;
+	font-size: 20px;
+	font-weight: lighter;
+	z-index: 100;
+	text-align: center;
+	display:none;
+}
+
+.shadow {
+	-moz-box-shadow: 0px 0px 5px #000;
+	-webkit-box-shadow: 0px 0px 5px #000;
+	box-shadow: 0px 0px 5px #000;
+}
+
+#progressbar {
+	text-align: center;
+	background: #888;
+	width: 250px;
+	height: 2px;
+	margin-top: 10px;
+}
+
+#bar {
+	background:#fff;
+	width:0px;
+	height:2px;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-ms-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+
+.popup {
+    display: none;
+	position: absolute;
+	margin-left: -10px;
+	margin-top: 180px;
+	width: 10px;
+	font-size: 16px;
+	height: 10px;
+	z-index: 100500;
+	text-align: center;
+	vertical-align: top;
+}
+.type {
+	font-size: 14px;
+	color: #9198A0;
+}
+.popup .cont {
+	position: relative;
+}
+.popup .actual {
+	position: absolute;
+	bottom: 45px;
+	width: 180px;
+	text-transform: capitalize;
+	margin-left: -110px;
+    padding: 10px 20px;
+    color: #fff;
+    background: rgba(78, 102, 126, 0.79);
+    border-radius: 3px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.3);
+}
+
+
+
+
+.hero2 {
+	position: absolute;
+    width: 960px;
+    z-index: 100500;
+    left: 50%;
+    margin-left: -480px;
+    top: 25vh;
+}
+.form-input {
+	margin: 40px auto;
+    width: 70%;
+  }
+  .form-input label {
+	position: relative;
+	display: block;
+	width: 100%;
+	min-height: 45px;
+	font-size: 20px;
+	color: #6E7782;
+  }
+  .form-input .placeholder {
+	position: absolute;
+	display: block;
+	top: 14px;
+	z-index: 2;
+	font-size: 20px;
+	transition: all 200ms ease-in-out;
+	width: 100%;
+	cursor: text;
+  }
+  .form-input input,
+  .form-input textarea {
+	position: absolute;
+	top: 15px;
+	background: none;
+	color: #fff;
+	z-index: 1;
+	width: 100%;
+	font-size: 24px;
+	border: 0;
+	border-bottom: 1px solid grey;
+	transition: border-color 200ms ease-in-out;
+	outline: none;
+	padding: 0;
+	margin: 0;
+  }
+  .form-input textarea {
+	min-height: 30px;
+	padding: 8px 0;
+  }
+  .form-input input {
+	height: 30px;
+  }
+  .form-input input:focus,
+  .form-input input:valid,
+  .form-input textarea:focus,
+  .form-input textarea:valid {
+	border-bottom: 2px solid #fff;
+  }
+  .form-input input:focus + .placeholder,
+  .form-input input:valid + .placeholder,
+  .form-input textarea:focus + .placeholder,
+  .form-input textarea:valid + .placeholder {
+	top: -10px;
+	cursor: inherit;
+	font-size: 18px;
+	color: #fff;
+  }
+  
